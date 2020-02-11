@@ -19,9 +19,28 @@ function getBookView(book){
     pagesView.innerText = book.pages;
     pagesView.classList.add("pages");
     bookView.append(pagesView);
+    // delete btn view
+    const deleteBtnView = document.createElement("button");
+    deleteBtnView.innerText = "Remove";
+    deleteBtnView.classList.add("deleteBtn");
+    deleteBtnView.addEventListener("click" , ()=>deleteBook(book.id));
+    bookView.append(deleteBtnView);
+    // toggle read btn view
+    const toggleReadBtnView = document.createElement("button");
+    toggleReadBtnView.innerText = "toggle";
+    toggleReadBtnView.classList.add("toggleReadBtn");
+    toggleReadBtnView.addEventListener("click" , ()=>{
+        toggleRead(book.id);
+        loadLibraryView();
+    });
+    bookView.append(toggleReadBtnView);
+
     return bookView;
 }
-
+function deleteBook(id) {
+    removeBookFormLibrary(id);
+    loadLibraryView();
+}
 function loadLibraryView(){
     const lib = document.getElementById("library");
     lib.innerHTML = "";
