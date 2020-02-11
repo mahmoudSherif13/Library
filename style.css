@@ -8,3 +8,9 @@
     font-size: small;
     margin-left: 65%;
 }
+.input{
+    margin: 15px ;
+}
+#addNewBookForm{
+     visibility: hidden;
+}
