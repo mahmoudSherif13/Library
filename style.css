@@ -1,0 +1,10 @@
+.book{
+    border: 2px solid black;
+    margin: 5px;
+    padding: 5px;
+    width: 50px;
+}
+.pages{
+    font-size: small;
+    margin-left: 65%;
+}
