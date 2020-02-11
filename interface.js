@@ -21,3 +21,10 @@ function getBookView(book){
     bookView.append(pagesView);
     return bookView;
 }
+
+function getLibraryView(){
+    const lib = document.getElementById("library");
+    library.forEach(book=>{
+        lib.append(getBookView(book));
+    });
+}
