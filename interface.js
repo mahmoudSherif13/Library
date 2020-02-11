@@ -1,7 +1,9 @@
 function getBookView(book){
     const bookView = document.createElement("div");
     bookView.classList.add("book");
-
+    if(book.read){
+        bookView.style.borderColor = 'green';
+    }
     // title view
     const titleView = document.createElement("div");
     titleView.innerText = book.title;
