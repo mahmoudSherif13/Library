@@ -24,6 +24,7 @@ function getBookView(book){
 
 function getLibraryView(){
     const lib = document.getElementById("library");
+    lib.innerHTML = "";
     library.forEach(book=>{
         lib.append(getBookView(book));
     });
