@@ -22,7 +22,7 @@ function getBookView(book){
     return bookView;
 }
 
-function getLibraryView(){
+function loadLibraryView(){
     const lib = document.getElementById("library");
     lib.innerHTML = "";
     library.forEach(book=>{
