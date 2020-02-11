@@ -16,3 +16,6 @@ function addBookToLibrary(book){
 function removeBookFormLibrary(id) {
     delete library[id];
 }
+function toggleRead(id) {
+    library[id].read = !library[id].read;
+}
